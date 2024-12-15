@@ -4,7 +4,7 @@ package com.br.exercicio7;
  *
  * @author tetzner
  */
-public class Exercicio7 {
+public class Principal {
 
     public static void main(String[] args) {
         try {
@@ -16,6 +16,5 @@ public class Exercicio7 {
         } catch(Exception e){
             System.out.println("Seguro nulo");
         }
-
     }
 }

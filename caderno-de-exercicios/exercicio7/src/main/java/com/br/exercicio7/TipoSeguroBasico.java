@@ -17,7 +17,7 @@ public class TipoSeguroBasico implements ITipoSeguro {
     }
     
     private boolean seAplica(Cliente cliente){
-        return cliente.getAnosConducao() > 10 && cliente.getQuantidadeAcidentesEm5Anos() == 0  && cliente.getIdade() > 35;
+        return cliente.getQuantidadeAnosConducao() > 10 && cliente.getQuantidadeAcidentesEm5Anos() == 0  && cliente.getIdade() > 35;
     }
     
 }

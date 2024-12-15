@@ -19,7 +19,7 @@ public class TipoSeguroCompleto implements ITipoSeguro {
     }
     
     private boolean seAplica(Cliente cliente){
-        return cliente.getQuantidadeAcidentesEm5Anos() <= 1  && (cliente.getIdade() >= 25 && cliente.getIdade() <= 35) && cliente.getBonusSeguro() >= 5;
+        return cliente.getQuantidadeAcidentesEm5Anos() <= 1  && (cliente.getIdade() >= 25 && cliente.getIdade() <= 35) && cliente.getQuantidadeBonusSeguro() >= 5;
     }
     
 }

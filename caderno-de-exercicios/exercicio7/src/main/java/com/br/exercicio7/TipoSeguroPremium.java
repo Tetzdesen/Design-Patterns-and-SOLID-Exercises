@@ -19,6 +19,6 @@ public class TipoSeguroPremium implements ITipoSeguro {
     }
 
     private boolean seAplica(Cliente cliente) {
-        return cliente.getQuantidadeVeiculos() > 2 && (cliente.getIdade() >= 25 && cliente.getIdade() <= 35) && cliente.getBonusSeguro() < 5;
+        return cliente.getQuantidadeVeiculos() > 2 && (cliente.getIdade() >= 25 && cliente.getIdade() <= 35) && cliente.getQuantidadeBonusSeguro() < 5;
     }
 }

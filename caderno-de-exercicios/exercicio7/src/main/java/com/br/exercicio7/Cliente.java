@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.br.exercicio7;
 
 /**
@@ -12,20 +8,20 @@ public class Cliente {
 
     private final String nome;
     private final int idade;
-    private final int anosConducao;
+    private final int quantidadeAnosConducao;
     private final int quantidadeAcidentesEm5Anos;
-    private final int bonusSeguro;
+    private final int quantidadeBonusSeguro;
     private final int quantidadeVeiculos;
 
-    public Cliente(String nome, int idade, int anosConducao, int quantidadeAcidentesEm5Anos, int bonusSeguro, int quantidadeVeiculos) {
+    public Cliente(String nome, int idade, int quantidadeAnosConducao, int quantidadeAcidentesEm5Anos, int quantidadeBonusSeguro, int quantidadeVeiculos) {
         this.nome = nome;
         this.idade = idade;
-        this.anosConducao = anosConducao;
+        this.quantidadeAnosConducao = quantidadeAnosConducao;
         this.quantidadeAcidentesEm5Anos = quantidadeAcidentesEm5Anos;
-        this.bonusSeguro = bonusSeguro;
+        this.quantidadeBonusSeguro = quantidadeBonusSeguro;
         this.quantidadeVeiculos = quantidadeVeiculos;
     }
-    
+
     public String getNome() {
         return nome;
     }
@@ -34,21 +30,24 @@ public class Cliente {
         return idade;
     }
 
-    public int getAnosConducao() {
-        return anosConducao;
+    public int getQuantidadeAnosConducao() {
+        return quantidadeAnosConducao;
     }
 
     public int getQuantidadeAcidentesEm5Anos() {
         return quantidadeAcidentesEm5Anos;
     }
 
-    public int getBonusSeguro() {
-        return bonusSeguro;
+    public int getQuantidadeBonusSeguro() {
+        return quantidadeBonusSeguro;
     }
 
     public int getQuantidadeVeiculos() {
         return quantidadeVeiculos;
     }
 
-  
+    @Override
+    public String toString() {
+        return "Cliente{" + "nome=" + nome + ", idade=" + idade + ", quantidadeAnosConducao=" + quantidadeAnosConducao + ", quantidadeAcidentesEm5Anos=" + quantidadeAcidentesEm5Anos + ", quantidadeBonusSeguro=" + quantidadeBonusSeguro + ", quantidadeVeiculos=" + quantidadeVeiculos + '}';
+    }
 }
