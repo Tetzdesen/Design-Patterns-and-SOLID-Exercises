@@ -81,10 +81,16 @@ public class ATM {
     }
 
     public int calcularQuantidadeCedula(ATM atm, ITipoCedula tipoCedula, double valor) {
+        if (atm == null || tipoCedula == null || valor < 0.0) {
+            throw new IllegalArgumentException("Dados inválidos ou nulos");
+        }
         return tipoCedula.calcularQuantidade(atm, valor);
     }
 
     public int calcularQuantidadeMoeda(ATM atm, ITipoMoeda tipoMoeda, double valor) {
+        if (atm == null || tipoMoeda == null || valor < 0.0) {
+            throw new IllegalArgumentException("Dados inválidos ou nulos");
+        }
         return tipoMoeda.calcularQuantidade(atm, valor);
     }
 }
