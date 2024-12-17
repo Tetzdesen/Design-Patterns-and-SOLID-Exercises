@@ -11,7 +11,7 @@ public class Principal {
             Cliente cliente = new Cliente("Kurt Cobain", 36, 11, 0, 2, 2);
 
             AvaliadoraSeguroService avaliadoraSeguro = new AvaliadoraSeguroService();
-            Seguro seguro = avaliadoraSeguro.retornaSeguroAdequadoCliente(cliente);
+            Seguro seguro = avaliadoraSeguro.processaSeguroAdequadoParaCliente(cliente);
             System.out.println(seguro.toString());
         } catch(Exception e){
             System.out.println("Seguro nulo");

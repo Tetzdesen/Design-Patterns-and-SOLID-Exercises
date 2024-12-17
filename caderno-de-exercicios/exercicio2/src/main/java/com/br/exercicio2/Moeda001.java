@@ -6,7 +6,7 @@ import java.math.RoundingMode;
 public class Moeda001 implements ITipoMoeda {
 
     @Override
-    public int calcularQuantidade(ATM atm, double valor) {
+    public void calcularQuantidadeMoeda(ATM atm, double valor) {
 
         BigDecimal valorTotal = BigDecimal.valueOf(valor);
 
@@ -18,9 +18,10 @@ public class Moeda001 implements ITipoMoeda {
         int quantidadeMoedas001Calculada = valorTotal.divide(BigDecimal.valueOf(0.01), RoundingMode.HALF_UP).intValue();
 
         if (seAplica(atm.getQuantidadeMoedasDe001DisponiveisNoCaixa(), quantidadeMoedas001Calculada)) {
-            return quantidadeMoedas001Calculada;
+            atm.setQuantidadeMoedasDe001DisponiveisParaSaque(quantidadeMoedas001Calculada);
         }
-        throw new RuntimeException("Quantidade de moedas indisponíveis");
+
+        
     }
 
     private boolean seAplica(int quantidadeDisponivel, int quantidadeMoedas001Calculada) {

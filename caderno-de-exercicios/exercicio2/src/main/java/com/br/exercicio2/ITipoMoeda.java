@@ -6,5 +6,5 @@ package com.br.exercicio2;
  */
 public interface ITipoMoeda {
 
-    public int calcularQuantidade(ATM atm, double valor);
+    public void calcularQuantidadeMoeda(ATM atm, double valor);
 }

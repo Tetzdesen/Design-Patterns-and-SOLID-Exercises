@@ -1,5 +1,8 @@
 package com.br.exercicio2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author tetzner
@@ -13,6 +16,12 @@ public class ATM {
     private int quantidadeNotasDe10DisponiveisNoCaixa;
     private int quantidadeMoedasDe1DisponiveisNoCaixa;
     private int quantidadeMoedasDe001DisponiveisNoCaixa;
+
+    private int quantidadeNotasDe100DisponiveisParaSaque;
+    private int quantidadeNotasDe50DisponiveisParaSaque;
+    private int quantidadeNotasDe10DisponiveisParaSaque;
+    private int quantidadeMoedasDe1DisponiveisParaSaque;
+    private int quantidadeMoedasDe001DisponiveisParaSaque;
 
     public ATM(String moeda) {
         if (moeda == null) {
@@ -44,6 +53,26 @@ public class ATM {
     public int getQuantidadeMoedasDe001DisponiveisNoCaixa() {
         return quantidadeMoedasDe001DisponiveisNoCaixa;
     }
+    
+     public int getQuantidadeNotasDe100DisponiveisParaSaque() {
+        return quantidadeNotasDe100DisponiveisParaSaque;
+    }
+
+    public int getQuantidadeNotasDe50DisponiveisParaSaque() {
+        return quantidadeNotasDe50DisponiveisParaSaque;
+    }
+
+    public int getQuantidadeNotasDe10DisponiveisParaSaque() {
+        return quantidadeNotasDe10DisponiveisParaSaque;
+    }
+
+    public int getQuantidadeMoedasDe1DisponiveisParaSaque() {
+        return quantidadeMoedasDe1DisponiveisParaSaque;
+    }
+
+    public int getQuantidadeMoedasDe001DisponiveisParaSaque() {
+        return quantidadeMoedasDe001DisponiveisParaSaque;
+    } 
 
     public void setQuantidadeNotasDe100DisponiveisNoCaixa(int quantidadeNotasDe100DisponiveisNoCaixa) {
         if (quantidadeNotasDe100DisponiveisNoCaixa < 0) {
@@ -79,18 +108,25 @@ public class ATM {
         }
         this.quantidadeMoedasDe001DisponiveisNoCaixa = quantidadeMoedasDe001DisponiveisNoCaixa;
     }
-
-    public int calcularQuantidadeCedula(ATM atm, ITipoCedula tipoCedula, double valor) {
-        if (atm == null || tipoCedula == null || valor < 0.0) {
-            throw new IllegalArgumentException("Dados inválidos ou nulos");
-        }
-        return tipoCedula.calcularQuantidade(atm, valor);
+    
+    public void setQuantidadeNotasDe100DisponiveisParaSaque(int quantidadeNotasDe100DisponiveisParaSaque) {
+        this.quantidadeNotasDe100DisponiveisParaSaque = quantidadeNotasDe100DisponiveisParaSaque;
     }
 
-    public int calcularQuantidadeMoeda(ATM atm, ITipoMoeda tipoMoeda, double valor) {
-        if (atm == null || tipoMoeda == null || valor < 0.0) {
-            throw new IllegalArgumentException("Dados inválidos ou nulos");
-        }
-        return tipoMoeda.calcularQuantidade(atm, valor);
+    public void setQuantidadeNotasDe50DisponiveisParaSaque(int quantidadeNotasDe50DisponiveisParaSaque) {
+        this.quantidadeNotasDe50DisponiveisParaSaque = quantidadeNotasDe50DisponiveisParaSaque;
     }
+
+    public void setQuantidadeNotasDe10DisponiveisParaSaque(int quantidadeNotasDe10DisponiveisParaSaque) {
+        this.quantidadeNotasDe10DisponiveisParaSaque = quantidadeNotasDe10DisponiveisParaSaque;
+    }
+
+    public void setQuantidadeMoedasDe1DisponiveisParaSaque(int quantidadeMoedasDe1DisponiveisParaSaque) {
+        this.quantidadeMoedasDe1DisponiveisParaSaque = quantidadeMoedasDe1DisponiveisParaSaque;
+    }
+
+    public void setQuantidadeMoedasDe001DisponiveisParaSaque(int quantidadeMoedasDe001DisponiveisParaSaque) {
+        this.quantidadeMoedasDe001DisponiveisParaSaque = quantidadeMoedasDe001DisponiveisParaSaque;
+    }
+
 }

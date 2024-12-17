@@ -6,5 +6,5 @@ package com.br.exercicio2;
  */
 public interface ITipoCedula {
 
-    public int calcularQuantidade(ATM atm, double valor);
+    public void calcularQuantidadeCedula(ATM atm, double valor);
 }

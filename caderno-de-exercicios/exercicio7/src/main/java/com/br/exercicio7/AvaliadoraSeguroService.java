@@ -17,7 +17,7 @@ public class AvaliadoraSeguroService {
         tiposSeguro.add(new TipoSeguroPremium());
     }
     
-    public Seguro retornaSeguroAdequadoCliente(Cliente cliente){
+    public Seguro processaSeguroAdequadoParaCliente(Cliente cliente){
         Seguro seguro = null;
         for(ITipoSeguro tipoSeguro : tiposSeguro){
             seguro = tipoSeguro.retornaSeguroAdequadoParaCliente(cliente);
@@ -26,5 +26,12 @@ public class AvaliadoraSeguroService {
             }
         }
         return seguro;
+    }
+    
+    public void addTipo(ITipoSeguro tipoSeguro){
+        if(tiposSeguro == null){
+            throw new IllegalArgumentException("tipo de seguro nulo ");
+        }
+        tiposSeguro.add(tipoSeguro);
     }
 }

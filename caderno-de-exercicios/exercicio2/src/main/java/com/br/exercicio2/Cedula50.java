@@ -10,7 +10,7 @@ import java.math.RoundingMode;
 public class Cedula50 implements ITipoCedula {
 
     @Override
-    public int calcularQuantidade(ATM atm, double valor) {
+    public void calcularQuantidadeCedula(ATM atm, double valor) {
 
         BigDecimal valorTotal = BigDecimal.valueOf(valor);
 
@@ -19,9 +19,9 @@ public class Cedula50 implements ITipoCedula {
         int quantidadeCedula50Calculada = valorTotal.divide(BigDecimal.valueOf(50.0), RoundingMode.HALF_UP).intValue();
 
         if (seAplica(atm.getQuantidadeNotasDe50DisponiveisNoCaixa(), quantidadeCedula50Calculada)) {
-            return quantidadeCedula50Calculada;
+            atm.setQuantidadeNotasDe50DisponiveisParaSaque(quantidadeCedula50Calculada);
         }
-        throw new RuntimeException("Quantidade de cedulas indisponiveis ");
+        
     }
 
     private boolean seAplica(int quantidadeDisponivel, int quantidadeCedula50Calculada) {
