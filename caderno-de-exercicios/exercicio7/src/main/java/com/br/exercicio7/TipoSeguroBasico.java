@@ -7,7 +7,7 @@ package com.br.exercicio7;
 public class TipoSeguroBasico implements ITipoSeguro {
 
     @Override
-    public Seguro retornaSeguroAdequadoParaCliente(Cliente cliente) {
+    public Seguro processaSeguro(Cliente cliente) {
         Seguro seguro = null;
         if(seAplica(cliente)){
             seguro = new Seguro("Seguro Básico");

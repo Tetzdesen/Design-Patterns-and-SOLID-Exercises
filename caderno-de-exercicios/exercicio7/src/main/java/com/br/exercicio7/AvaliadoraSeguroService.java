@@ -20,7 +20,7 @@ public class AvaliadoraSeguroService {
     public Seguro processaSeguroAdequadoParaCliente(Cliente cliente){
         Seguro seguro = null;
         for(ITipoSeguro tipoSeguro : tiposSeguro){
-            seguro = tipoSeguro.retornaSeguroAdequadoParaCliente(cliente);
+            seguro = tipoSeguro.processaSeguro(cliente);
             if(seguro != null){
                 break;
             }
