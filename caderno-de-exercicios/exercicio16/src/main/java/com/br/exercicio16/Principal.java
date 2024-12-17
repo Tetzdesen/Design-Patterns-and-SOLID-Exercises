@@ -8,9 +8,9 @@ public class Principal {
 
     public static void main(String[] args) {
         
-        ProdutoImpl produto = new ProdutoImpl("Vinicius Cole", false);
+        ProdutoImpl produto = new ProdutoImpl("Teste", false);
         
-        UsuarioImpl usuario = new UsuarioImpl("Vinicius Cole", "viniciuscolenarutoonline@gmail.com");
+        UsuarioImpl usuario = new UsuarioImpl("Teste", "Teste@gmail.com");
         
         produto.adicionarObservador(usuario);
         
