@@ -8,7 +8,7 @@ package com.br.exercicio20;
  *
  * @author tetzner
  */
-public class Exercicio20 {
+public class Principal {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
